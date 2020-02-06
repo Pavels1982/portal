@@ -5,6 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
+    'name' => 'RemotionService',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
@@ -48,6 +49,7 @@ $config = [
 
     ],
     'params' => $params,
+    'defaultRoute' => 'site/about'
 ];
 
 if (YII_ENV_DEV) {
