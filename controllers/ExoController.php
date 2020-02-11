@@ -12,25 +12,10 @@ use yii\filters\VerbFilter;
 /**
  * ExoController implements the CRUD actions for Exoskeleton model.
  */
-class ExoController extends Controller
+class ExoController extends AppController
 {
     
-  public function behaviors()
-    {
-        return [ 
-            'as beforeRequest' => [
-                  'class' => 'yii\filters\AccessControl',
-                 'rules' => [['allow' => true,'actions' => ['login'],], ['allow' => true,  'roles' => ['@'],],], 
-
-                'denyCallback' => function () {
-        return Yii::$app->response->redirect(['site/login']);
-    },
-    ],
-
-        ];
-    }
-
-
+ 
 
 
     /**

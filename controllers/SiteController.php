@@ -11,29 +11,9 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Exoskeleton;
 
-class SiteController extends Controller
+class SiteController extends AppController
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [ 
-            'as beforeRequest' => [
-                  'class' => 'yii\filters\AccessControl',
-                 'rules' => [['allow' => true,'actions' => ['login'],], ['allow' => true,  'roles' => ['@'],],], 
-
-                'denyCallback' => function () {
-        return Yii::$app->response->redirect(['site/login']);
-    },
-
-
-
-],
-
-        ];
-    }
-
+   
     /**
      * {@inheritdoc}
      */
