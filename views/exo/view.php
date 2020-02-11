@@ -31,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'ssid',
+            'steps_done',
             'type',
             'rising',
             'squats',
@@ -38,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'turn_right',
             'errors_count',
             'worked_hours',
-            'steps_done',
+            
             'log_file:ntext',
         ],
     ]) ?>

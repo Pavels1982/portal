@@ -18,6 +18,8 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
+                'login' => 'site/login',
+                'exo' => 'exo/index'
 
             ],
 
