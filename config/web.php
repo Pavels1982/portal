@@ -49,7 +49,8 @@ $config = [
 
     ],
     'params' => $params,
-    'defaultRoute' => 'site/about'
+    'language' => 'ru-RU',
+    'defaultRoute' => 'exo/index'
 ];
 
 if (YII_ENV_DEV) {
