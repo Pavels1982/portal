@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Exoskeleton */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Все экзоскелеты', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Exoskeletons', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -30,17 +30,27 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
+            'serial_number',
+            'sale_date',
+            'company',
+            'company_location',
+            'company_website',
+            'company_email:email',
+            'company_phone',
+            'contact_name',
+            'contact_phone',
+            'contact_email:email',
             'ssid',
-            'steps_done',
             'type',
-            'rising',
+            'worked_hours',
+            'errors_count',
+            'steps_done',
             'squats',
+            'rising',
             'turn_left',
             'turn_right',
-            'errors_count',
-            'worked_hours',
-            
-            'log_file:ntext',
+            'log_file',
+            'document_file',
         ],
     ]) ?>
 

@@ -12,11 +12,22 @@ use yii\filters\VerbFilter;
 /**
  * ExoController implements the CRUD actions for Exoskeleton model.
  */
-class ExoController extends AppController
+class ExoController extends Controller
 {
-    
- 
-
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
+    }
 
     /**
      * Lists all Exoskeleton models.
